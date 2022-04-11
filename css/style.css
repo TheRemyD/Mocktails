@@ -1,0 +1,166 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    background: linear-gradient(45deg, #313131, #626262);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    width: 650px;
+    background-color: #1b0d21;
+    border-radius: 2.5rem;
+    box-shadow: 5px 5px 45px rgba(0, 0, 0, 0.75);
+}
+
+.card__top {
+    position: relative;
+}
+
+.card__top--image {
+    width: 100%;
+    height: 500px;
+    opacity: 75%;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+}
+
+.card__top--title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7rem;
+    text-align: center;
+}
+
+.neonText {
+    animation: pulsate 0.35s ease-in-out infinite alternate;
+    color: #b8b8b8;
+    text-shadow: 0 0 7px #b8b8b8, 0 0 10px #b8b8b8, 0 0 21px #b8b8b8, 0 0 42px #9e2636,
+        0 0 82px #9e2636, 0 0 92px #9e2636, 0 0 102px #9e2636, 0 0 151px #9e2636;
+}
+
+@keyframes pulsate {
+    100% {
+        /* Larger blur radius */
+        text-shadow: 0 0 4px #b8b8b8, 0 0 11px #b8b8b8, 0 0 19px #b8b8b8, 0 0 40px #9e2636,
+            0 0 80px #9e2636, 0 0 90px #9e2636, 0 0 100px #9e2636, 0 0 150px #9e2636;
+    }
+    0% {
+        /* A slightly smaller blur radius */
+        text-shadow: 0 0 4px #b8b8b8, 0 0 10px #b8b8b8, 0 0 18px #b8b8b8, 0 0 38px #9e2636,
+            0 0 73px #9e2636, 0 0 80px #9e2636, 0 0 94px #9e2636, 0 0 140px #9e2636;
+    }
+}
+
+.card__bottom {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card__bottom--input {
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.button {
+    background-color: rgb(80, 11, 22);
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    color: #b8b8b8;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.recipe__info {
+    color: #b8b8b8;
+    text-align: left;
+    margin-left: 1.5rem;
+}
+
+.recipe__info--ingredients {
+    margin-top: 1rem;
+}
+
+.recipe__info--instructions {
+    margin-block: 1rem 2rem;
+}
