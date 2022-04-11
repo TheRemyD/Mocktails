@@ -1,2 +1,9 @@
-# Mocktails
-Easily search through a list of known Non-Alcoholic drinks or choose to try a random one.
+<br />
+<div align="center">
+
+  <h3 align="center">Mocktails</h3>
+
+  <p align="center">
+    Get your drink on (without the alcohol)
+  </p>
+</div>
